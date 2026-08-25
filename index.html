@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>卒業要件チェッカー v2</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="page-header">
+    <p class="eyebrow">Nagasaki University / IS・DS</p>
+    <h1>卒業要件チェッカー <span>v2</span></h1>
+    <p>学則別表（R2〜R7入学者）に合わせて、必修・選択必修・選択単位を分けて判定します。</p>
+</header>
+<main class="container">
+    <section class="input-card">
+        <div class="field">
+            <label for="recFile">成績CSV</label>
+            <input type="file" id="recFile" accept=".csv,.txt">
+        </div>
+        <div class="form-grid">
+            <div class="field"><label for="grade">入学年度</label><select id="grade">
+                <option value="2025">2025年度（R7）</option>
+                <option value="2024">2024年度（R6）</option>
+                <option value="2021-23">2021〜2023年度（R3・R4・R5）</option>
+                <option value="2020">2020年度（R2）</option>
+            </select></div>
+            <div class="field"><label for="major">コース</label><select id="major"><option value="IS">IS</option><option value="DS">DS</option></select></div>
+        </div>
+        <div class="actions"><button id="judgeButton" class="primary">判定する</button><button id="resetButton" class="secondary" hidden>別のCSVを判定</button></div>
+        <p id="status" class="status" aria-live="polite"></p>
+    </section>
+    <div id="output"></div>
+</main>
+<script src="data/requirements.js"></script>
+<script src="js/csv.js"></script>
+<script src="js/checker.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
