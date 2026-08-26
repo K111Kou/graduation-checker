@@ -2,7 +2,7 @@
 
 ## ダウンロード方法
 
-1. `graduation-checker-v2.zip` をダウンロードします。
+1. `graduation-checker.zip` をダウンロードします。
 2. ダウンロードしたZIPファイルを展開します。
 3. 展開したフォルダ内の `index.html` を確認します。
 
