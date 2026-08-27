@@ -84,7 +84,6 @@
             ${progress('専門選択',p.elective.earned,p.elective.target,p.elective.satisfied)}
             <p>${p.elective.satisfied ? '必要な選択単位数を満たしています。' : `あと ${p.elective.missing} 単位必要です。`}</p>
             ${externalUsed.length ? `<p class="hint">外部プログラム算入: ${externalUsed.map(x=>`${esc(x.label)} ${x.counted}単位`).join(' / ')}</p>`:''}
-            <p class="hint">選択科目は「未履修科目を全部取る」必要はないため、未履修一覧ではなく必要単位数で判定しています。</p>
         </details>
 
         ${result.unclassified.length ? `<details><summary>未分類の合格科目 (${result.unclassified.length}件)</summary>

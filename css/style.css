@@ -1,1 +1,497 @@
-:root{font-family:"Segoe UI","Yu Gothic UI","Meiryo",sans-serif;color:#1e293b;background:#f5f7fb}*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#eef4ff 0,#f7f9fc 340px,#f7f9fc 100%)}.page-header{max-width:980px;margin:auto;padding:48px 24px 22px}.page-header h1{margin:4px 0 10px;font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.04em}.page-header h1 span{font-size:.45em;color:#5575c5}.page-header>p:last-child{max-width:720px;color:#64748b}.eyebrow{margin:0;text-transform:uppercase;letter-spacing:.13em;font-size:.78rem;font-weight:800;color:#5575c5}.container{max-width:980px;margin:auto;padding:0 24px 60px}.input-card,.result-hero,details,.summary-card{background:#fff;border:1px solid #e3e8f2;box-shadow:0 10px 32px rgba(40,60,100,.07)}.input-card{padding:24px;border-radius:18px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{margin-bottom:16px}.field label{display:block;font-weight:750;margin-bottom:7px}.field input,.field select{width:100%;border:1px solid #cbd5e1;border-radius:10px;padding:12px;background:#fff;font-size:1rem}.actions{display:flex;gap:10px}.actions button{border:0;border-radius:10px;padding:12px 18px;font-weight:800;cursor:pointer}.primary{background:#355db4;color:#fff}.secondary{background:#e9eef8;color:#274a95}.actions button:disabled{opacity:.55;cursor:not-allowed}.status{min-height:1.2em;margin:12px 0 0;color:#64748b;font-size:.9rem}.result-hero{margin-top:24px;border-radius:20px;padding:24px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-left:7px solid #ca4f4f}.result-hero.eligible{border-left-color:#3f9d69}.result-hero h2{margin:5px 0;font-size:1.6rem}.donut{width:112px;height:112px;flex:0 0 auto;border-radius:50%;background:conic-gradient(#355db4 var(--rate),#e7ebf2 0);display:grid;place-items:center;position:relative}.donut:after{content:"";position:absolute;inset:13px;border-radius:50%;background:#fff}.donut span{z-index:1;font-weight:900;font-size:1.3rem}.summary-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:18px 0}.summary-card{border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:6px}.summary-card>span:first-child{color:#64748b;font-size:.85rem}.summary-card strong{font-size:1.28rem}.summary-card small{color:#94a3b8}.badge{display:inline-block;width:max-content;padding:3px 8px;border-radius:99px;font-size:.74rem;font-weight:800}.badge-ok{color:#167447;background:#e5f7ec}.badge-ng{color:#a53b3b;background:#fdeaea}details{border-radius:14px;margin:14px 0;overflow:hidden}summary{cursor:pointer;padding:16px 18px;font-weight:850;background:#fbfcfe;border-bottom:1px solid #edf0f5}details>section,details>.progress-block,details>p,details>.table-wrap{margin-left:18px;margin-right:18px}.rule-card{padding:12px 0 18px;border-bottom:1px solid #edf0f5}.rule-card:last-child{border-bottom:0}.rule-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}.progress-block{margin:13px 0}.progress-head{display:flex;justify-content:space-between;gap:16px;font-size:.92rem;margin-bottom:6px}.progress-track{height:9px;border-radius:99px;background:#e8edf5;overflow:hidden}.progress-fill{height:100%;background:#cf6969;border-radius:inherit}.progress-fill.ok{background:#4aa071}.table-wrap{overflow:auto;margin-top:12px;margin-bottom:14px}table{border-collapse:collapse;width:100%;min-width:520px}th,td{text-align:left;padding:10px;border-bottom:1px solid #e8edf3;font-size:.9rem}th{background:#f7f9fc;color:#475569}.success-line{color:#278459;font-weight:700}.hint{font-size:.88rem;color:#64748b}.warning{font-size:.9rem;color:#9a5b20;background:#fff7e7;padding:10px;border-radius:8px}.set-box{border:1px solid #e0e6ef;border-radius:10px;padding:12px;margin:10px 0}.set-box.set-ok{border-color:#8fd0aa;background:#f4fbf7}.set-box ul{margin:8px 0 0;padding-left:20px}.set-box li{margin:3px 0}.set-box .passed{color:#277b51}.set-box .missing{color:#a54444}.source-note{color:#64748b;font-size:.8rem;text-align:center;margin-top:22px}@media(max-width:800px){.summary-grid{grid-template-columns:repeat(2,1fr)}.result-hero{align-items:flex-start}.donut{width:90px;height:90px}.form-grid{grid-template-columns:1fr}}@media(max-width:520px){.page-header,.container{padding-left:14px;padding-right:14px}.page-header{padding-top:28px}.summary-grid{grid-template-columns:1fr 1fr}.result-hero{flex-direction:column}.actions{flex-direction:column}.actions button{width:100%}}
+/* ========================================
+   卒業要件チェッカー v2
+   初期版デザイン寄せ
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", "Yu Gothic UI", "Meiryo", sans-serif;
+    margin: 0;
+    padding: 40px;
+    background: linear-gradient(135deg, #e8f0ff, #ffffff);
+    color: #333;
+}
+
+/* ---------- ヘッダー ---------- */
+
+.page-header {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    margin: 0 0 12px;
+    font-size: 2.2rem;
+    color: #2c4e9a;
+    letter-spacing: 0;
+}
+
+.page-header h1 span {
+    font-size: 0.55em;
+    color: #5f76aa;
+}
+
+.page-header > p:last-child {
+    max-width: none;
+    margin: 0 0 24px;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.eyebrow {
+    margin: 0 0 5px;
+    color: #5f76aa;
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+/* ---------- 全体コンテナ ---------- */
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- 入力フォーム ---------- */
+
+.input-card {
+    padding: 0 0 25px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #dde3ef;
+    box-shadow: none;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccd;
+    border-radius: 8px;
+    background: #fafafa;
+    color: #333;
+    font-size: 1rem;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.actions button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.primary {
+    color: #fff;
+    background: linear-gradient(135deg, #3c6fd1, #214fa6);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.secondary {
+    color: #2c4e9a;
+    background: #edf2fb;
+    border: 1px solid #cbd7ef !important;
+}
+
+.actions button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.actions button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.status {
+    min-height: 1.2em;
+    margin: 12px 0 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* ---------- 総合判定 ---------- */
+
+.result-hero {
+    margin-top: 25px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    background: #f9fbff;
+    border: none;
+    border-left: 5px solid #d9534f;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.result-hero.eligible {
+    border-left-color: #5cb85c;
+}
+
+.result-hero h2 {
+    margin: 5px 0 8px;
+    color: #2c4e9a;
+    font-size: 1.55rem;
+}
+
+.result-hero p {
+    margin: 5px 0;
+}
+
+/* 円形進捗はv2の機能として残しつつ初期版の色へ */
+.donut {
+    width: 108px;
+    height: 108px;
+    flex: 0 0 auto;
+    position: relative;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: conic-gradient(#3c6fd1 var(--rate), #e5e5e5 0);
+}
+
+.donut::after {
+    content: "";
+    position: absolute;
+    inset: 14px;
+    border-radius: 50%;
+    background: #f9fbff;
+}
+
+.donut span {
+    position: relative;
+    z-index: 1;
+    color: #2c4e9a;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* ---------- 要件サマリー ---------- */
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.summary-card {
+    padding: 16px;
+    background: #f9fbff;
+    border: none;
+    border-left: 5px solid #3c6fd1;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.summary-card > span:first-child {
+    color: #555;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.summary-card strong {
+    color: #2c4e9a;
+    font-size: 1.3rem;
+}
+
+.summary-card small {
+    color: #777;
+}
+
+/* ---------- 状態表示 ---------- */
+
+.badge {
+    display: inline-block;
+    width: max-content;
+    padding: 4px 9px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: bold;
+}
+
+.badge-ok {
+    color: #2f6f3e;
+    background: #dff0d8;
+}
+
+.badge-ng {
+    color: #a33c3c;
+    background: #f9d6d5;
+}
+
+/* ---------- 詳細セクション ---------- */
+
+details {
+    margin: 16px 0;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #d7deeb;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+summary {
+    padding: 13px 16px;
+    cursor: pointer;
+    color: #2c4e9a;
+    background: #f1f5ff;
+    border-bottom: 1px solid #d7deeb;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+details > section,
+details > .progress-block,
+details > p,
+details > .table-wrap {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.rule-card {
+    padding: 14px 0 18px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.rule-card:last-child {
+    border-bottom: none;
+}
+
+.rule-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* ---------- 進捗バー ---------- */
+
+.progress-block {
+    margin: 18px 0;
+}
+
+.progress-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.progress-track {
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
+    background: #e5e5e5;
+    border-radius: 15px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #d9534f;
+    border-radius: 15px;
+    transition: width 0.8s;
+}
+
+.progress-fill.ok {
+    background: #5cb85c;
+}
+
+/* ---------- 表 ---------- */
+
+.table-wrap {
+    margin-top: 12px;
+    margin-bottom: 16px;
+    overflow-x: auto;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+th {
+    padding: 10px;
+    color: #fff;
+    background: #3c6fd1;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.92rem;
+}
+
+tr:nth-child(even) td {
+    background: #f1f5ff;
+}
+
+/* ---------- 選択必修 ---------- */
+
+.set-box {
+    margin: 10px 0;
+    padding: 12px;
+    background: #fff;
+    border: 1px solid #d7deeb;
+    border-radius: 8px;
+}
+
+.set-box.set-ok {
+    background: #f3faf4;
+    border-color: #9bcba7;
+}
+
+.set-box ul {
+    margin: 8px 0 0;
+    padding-left: 20px;
+}
+
+.set-box li {
+    margin: 4px 0;
+}
+
+.set-box .passed,
+.success-line {
+    color: #39824d;
+    font-weight: bold;
+}
+
+.set-box .missing {
+    color: #b14b4b;
+}
+
+/* ---------- 補足 ---------- */
+
+.hint {
+    color: #666;
+    font-size: 0.88rem;
+}
+
+.warning {
+    padding: 10px;
+    color: #8a5a1f;
+    background: #fff5db;
+    border: 1px solid #f0dfaa;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.source-note {
+    margin-top: 22px;
+    color: #777;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* ---------- スマートフォン ---------- */
+
+@media (max-width: 700px) {
+    body {
+        padding: 18px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-hero {
+        align-items: flex-start;
+    }
+
+    .donut {
+        width: 88px;
+        height: 88px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .result-hero {
+        flex-direction: column;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .actions button {
+        width: 100%;
+    }
+
+    .progress-head {
+        flex-direction: column;
+        gap: 3px;
+    }
+}
