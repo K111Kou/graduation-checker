@@ -36,3 +36,9 @@
 - ZIPの中身は削除せず、フォルダ構成をそのまま使用してください。
 - 成績CSVはブラウザ内で処理されます。
 - 判定結果は参考用です。最終的な卒業要件の確認は、大学が公開している履修案内・要項等でも確認してください。
+
+## フィードバック
+
+不具合や改善要望があれば、以下のフォームからお願いします。
+
+[フィードバックフォーム](https://docs.google.com/forms/d/e/1FAIpQLScdDwcADsLQ7nmzZ3UuiaDnnvnxMsJhQ4j9V1U0Uq3NoaWCIA/viewform?usp=header)
