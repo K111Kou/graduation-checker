@@ -1,10 +1,10 @@
 卒業要件チェッカー v2 の現行判定ロジックで自動検証済みです。
 
-OK 01_R7_2025_IS_全要件充足_UTF8.csv => eligible=true, counted=127/127
-OK 02_R7_2025_IS_必修1科目不足.csv => eligible=false, counted=119/127
-OK 03_R7_2025_DS_全要件充足_UTF8.csv => eligible=true, counted=127/127
-OK 04_R7_2025_DS_選択必修セット不足.csv => eligible=false, counted=125/127
-OK 05_R6_2024_IS_専門選択不足.csv => eligible=false, counted=121/126
-OK 06_R3-R5_2021-23_DS_全要件充足_ShiftJIS.csv => eligible=true, counted=126/126
-OK 07_R2_2020_IS_全要件充足_UTF8.csv => eligible=true, counted=126/126
-OK 08_R7_2025_IS_不合格と重複を含む.csv => eligible=false, counted=125/127
+OK 01_R6_2024_IS_全要件充足.csv => eligible=true, counted=126/126
+OK 02_R6_2024_IS_必修不足.csv => eligible=false, counted=118/126
+OK 03_R6_2024_IS_専門選択不足.csv => eligible=false, counted=121/126
+OK 04_R6_2024_DS_全要件充足.csv => eligible=true, counted=126/126
+OK 05_R6_2024_DS_選択必修不足.csv => eligible=false, counted=124/126
+OK 06_R6_2024_IS_不合格と重複を含む.csv => eligible=false, counted=124/126
+OK 07_参考_R7_2025_DS_全要件充足.csv => eligible=true, counted=127/127
+OK 08_参考_R2_2020_IS_全要件充足.csv => eligible=true, counted=126/126
